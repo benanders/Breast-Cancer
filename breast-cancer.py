@@ -119,5 +119,7 @@ predicted = svm.predict(X_test)
 print("Accuracy: " + str(sklearn.metrics.accuracy_score(y_test, predicted)))
 
 # Measure precision and recall
-print("Precision: " + str(sklearn.metrics.precision_score(y_test, predicted)))
-print("Recall: " + str(sklearn.metrics.recall_score(y_test, predicted)))
+# print("Precision: " + str(sklearn.metrics.precision_score(y_test, predicted)))
+# print("Recall: " + str(sklearn.metrics.recall_score(y_test, predicted)))
+report = sklearn.metrics.classification_report(y_test, predicted, digits=4)
+print(report)
